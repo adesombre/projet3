@@ -1,14 +1,14 @@
 # fonction  affichage du labyrhinte
-def charge_labyrinthe():
-    labyrinthe = open("map.txt")# Ici, ouvrir le fichier
+labyrinthe = open("map.txt")# Ici, ouvrir le fichier
 
     # affiche labyrinthe
 def affiche_labyrinthe():
     labyrinthe = open("map.txt")
     for ligne in labyrinthe.readlines():
         print(ligne)
+    labyrinthe.close()
 
 
 # programme principal
-charge_labyrinthe()
+
 affiche_labyrinthe()
