@@ -6,7 +6,7 @@ size=x,y=640,480
 xm,ym=0,0
 xg,yg=100,100
 screen=pygame.display.set_mode(size)
-bg=pygame.image.load('structures.jpg')
+bg=pygame.image.load('structures.png')
 bg1=pygame.transform.scale(bg,(x,y))
 mac=pygame.image.load('macGyver.png')
 gardien=pygame.image.load('Gardien.png')
