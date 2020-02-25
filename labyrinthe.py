@@ -3,36 +3,53 @@
 # programme principal
 
 
-
 def load_labyrinthe():
-	lab=[]
-	with open("map.txt") as file:
-		for ligne in file:
-			lab_line=[]
-			for char in ligne:
-				if char != '\n':
-					lab_line.append(char)
-			lab.append(lab_line)
-	return lab		
+    lab = []
+    m_position_x = 0
+    m_position_y = 0
+    with open("map.txt") as file:
+        for y, ligne in enumerate(file):
+            lab_line = []
+            for x, char in enumerate(ligne):
+                if char != '\n':
+                    if char == "m":
+                        m_position_x = x
+                        m_position_y = y
+                    lab_line.append(char)
+            lab.append(lab_line)
+    return lab, m_position_x, m_position_y
 
-def display_labyrinthe(labyrinthe): 
-	for line in labyrinthe:
-		
-		print("".join(line))
+
+def display_labyrinthe(labyrinthe):
+    for line in labyrinthe:
+        print("".join(line))
+
 
 def main():
-	labyrinthe=load_labyrinthe()
-	while True:
-		display_labyrinthe(labyrinthe)
-		user_input=input("appuyer sur un touche!")
-		labyrinthe.append(user_input)
-		print(labyrinthe)
-        
+    labyrinthe, x, y = load_labyrinthe()
+    while True:
+        display_labyrinthe(labyrinthe)
+        user_input = input("appuyer sur un touche!")
 
-                              
-
-main()		
-
-
-
-
+        if user_input == 't':
+            # y - 1 est la case au dessus
+            if labyrinthe[y - 1][x] != '#':
+                labyrinthe[y - 1][x] = 'm'
+                labyrinthe[y][x] = ' '
+                y = y - 1
+        elif user_input == 'r':
+            if labyrinthe[y][x+1] != '#':
+                labyrinthe[y][x + 1] = 'm'
+                labyrinthe[y][x] = ' '
+                x = x + 1
+        elif user_input == 'l':
+            if labyrinthe[y][x-1] != '#':
+                labyrinthe[y][x -1 ] = 'm'
+                labyrinthe[y][x] = ' '
+                x = x - 1
+        elif user_input == 'b':
+            if labyrinthe[y + 1][x] != '#':
+                labyrinthe[y + 1][x] = 'm'
+                labyrinthe[y][x] = ' '
+                y = y - 1
+main()
