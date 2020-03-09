@@ -1,4 +1,6 @@
-# fonction  affichage du labyrhinte
+# fonction  affichage du labyrhin
+import random
+
 
 # programme principal
 
@@ -25,8 +27,21 @@ def display_labyrinthe(labyrinthe):
         print("".join(line))
 
 
+def objet(labyrinthe):
+    object = ["a", "b", "c"]
+
+    for o in object:
+        xo = random.randint(0, 14)
+        yo = random.randint(0, 14)
+        while labyrinthe[yo][xo] == "#":
+            xo = random.randint(0, 14)
+            yo = random.randint(0, 14)
+        labyrinthe[yo][xo] = o
+
+
 def main():
     labyrinthe, x, y = load_labyrinthe()
+    objet(labyrinthe)
     while True:
         display_labyrinthe(labyrinthe)
         user_input = input("appuyer sur un touche!")
@@ -38,13 +53,13 @@ def main():
                 labyrinthe[y][x] = ' '
                 y = y - 1
         elif user_input == 'r':
-            if labyrinthe[y][x+1] != '#':
+            if labyrinthe[y][x + 1] != '#':
                 labyrinthe[y][x + 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x + 1
         elif user_input == 'l':
-            if labyrinthe[y][x-1] != '#':
-                labyrinthe[y][x -1 ] = 'm'
+            if labyrinthe[y][x - 1] != '#':
+                labyrinthe[y][x - 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x - 1
         elif user_input == 'b':
@@ -52,4 +67,6 @@ def main():
                 labyrinthe[y + 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y - 1
+
+
 main()
