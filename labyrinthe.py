@@ -49,32 +49,24 @@ def main():
         if user_input == 't':
             # y - 1 est la case au dessus
             if labyrinthe[y - 1][x] != '#':
-                if labyrinthe[y -1][x] == object:
-                    p = object + 1
                 labyrinthe[y - 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y - 1
         elif user_input == 'r':
             if labyrinthe[y][x + 1] != '#':
-                if labyrinthe[y][x + 1] == object:
-                    p = object + 1
                 labyrinthe[y][x + 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x + 1
         elif user_input == 'l':
             if labyrinthe[y][x - 1] != '#':
-                if labyrinthe[y][x - 1] == object:
-                    p = object + 1
                 labyrinthe[y][x - 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x - 1
         elif user_input == 'b':
             if labyrinthe[y + 1][x] != '#':
-                if labyrinthe[y + 1][x] == object:
-                    p = object + 1
                 labyrinthe[y + 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y + 1
-        print(p)
+
 
 main()
