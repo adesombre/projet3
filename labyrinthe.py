@@ -49,24 +49,40 @@ def main():
         if user_input == 't':
             # y - 1 est la case au dessus
             if labyrinthe[y - 1][x] != '#':
+                if 'm' != objet(labyrinthe):
+
+                    print("point")
+
                 labyrinthe[y - 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y - 1
         elif user_input == 'r':
             if labyrinthe[y][x + 1] != '#':
+                if 'm' != objet(labyrinthe):
+                    print("point")
                 labyrinthe[y][x + 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x + 1
         elif user_input == 'l':
             if labyrinthe[y][x - 1] != '#':
+                if 'm' != objet(labyrinthe):
+                    print("point")
                 labyrinthe[y][x - 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x - 1
         elif user_input == 'b':
             if labyrinthe[y + 1][x] != '#':
+                if 'm' != objet(labyrinthe):
+                    print("point")
                 labyrinthe[y + 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y + 1
 
 
 main()
+def prend_objet():
+    point=0
+    if 'm' != objet(labyrinthe):
+        print("point")
+        point = point +1
+    return point
