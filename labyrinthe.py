@@ -39,52 +39,63 @@ def objet(labyrinthe):
         labyrinthe[yo][xo] = o
 
 
+def end_game(point):
+    if point == 3:
+        print("vous avez gagnee!!")
+    else:
+        print("vous avez perdu ...")
+    exit()
+
+
 def main():
     labyrinthe, x, y = load_labyrinthe()
     objet(labyrinthe)
-
+    point = 0
     while True:
         display_labyrinthe(labyrinthe)
         user_input = input("appuyer sur un touche!")
-        point = 0
-        point = point + 1
         if user_input == 't':
             # y - 1 est la case au dessus
             if labyrinthe[y - 1][x] != '#':
-                if 'm' != object:
+                if labyrinthe[y - 1][x] != " ":
+                    if labyrinthe[y - 1][x] == "g":
+                        end_game(point)
 
-                    print("point",point)
+                    point = point + 1
+                    print(point)
+
                 labyrinthe[y - 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y - 1
-                point = point + 1
+
         elif user_input == 'r':
             if labyrinthe[y][x + 1] != '#':
-                if 'm' != object:
+                if labyrinthe[y][x + 1] != " ":
+                    point = point + 1
+                    print(point)
 
-                    print("point",point)
                 labyrinthe[y][x + 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x + 1
-                point = point + 1
+
         elif user_input == 'l':
             if labyrinthe[y][x - 1] != '#':
-                if 'm' != object:
+                if labyrinthe[y][x - 1] != " ":
+                    point = point + 1
+                    print(point)
 
-                    print("point",point)
                 labyrinthe[y][x - 1] = 'm'
                 labyrinthe[y][x] = ' '
                 x = x - 1
-                point = point + 1
         elif user_input == 'b':
             if labyrinthe[y + 1][x] != '#':
-                if 'm' != object:
+                if labyrinthe[y + 1][x] != " ":
+                    point = point + 1
+                    print(point)
 
-                    print("point",point)
                 labyrinthe[y + 1][x] = 'm'
                 labyrinthe[y][x] = ' '
                 y = y + 1
-                point =point + 1
 
 
 main()
