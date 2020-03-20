@@ -1,4 +1,5 @@
 # fonction  affichage du labyrhin
+
 import random
 
 
@@ -19,7 +20,7 @@ def load_labyrinthe():
                         m_position_y = y
                     lab_line.append(char)
             lab.append(lab_line)
-    return lab, m_position_x, m_position_y
+    return lab, m_position_y, m_position_x
 
 
 def display_labyrinthe(labyrinthe):
@@ -29,7 +30,6 @@ def display_labyrinthe(labyrinthe):
 
 def objet(labyrinthe):
     object = ["a", "b", "c"]
-
     for o in object:
         xo = random.randint(0, 14)
         yo = random.randint(0, 14)
@@ -37,6 +37,19 @@ def objet(labyrinthe):
             xo = random.randint(0, 14)
             yo = random.randint(0, 14)
         labyrinthe[yo][xo] = o
+
+
+def deplacement(user_input, y, x):
+    labyrinthe, y, x = load_labyrinthe()
+    point = 0
+    if user_input == user_input:
+        # y - 1 est la case au dessus
+        if labyrinthe[y][x] != '#':
+            if labyrinthe[y][x] != " ":
+                if labyrinthe[y][x] == "g":
+                    end_game(point)
+                    point = point + 1
+                    print(point)
 
 
 def end_game(point):
@@ -48,54 +61,38 @@ def end_game(point):
 
 
 def main():
-    labyrinthe, x, y = load_labyrinthe()
+
+    labyrinthe, y, x = load_labyrinthe()
     objet(labyrinthe)
+
     point = 0
     while True:
         display_labyrinthe(labyrinthe)
         user_input = input("appuyer sur un touche!")
         if user_input == 't':
-            # y - 1 est la case au dessus
-            if labyrinthe[y - 1][x] != '#':
-                if labyrinthe[y - 1][x] != " ":
-                    if labyrinthe[y - 1][x] == "g":
-                        end_game(point)
-
-                    point = point + 1
-                    print(point)
-
-                labyrinthe[y - 1][x] = 'm'
-                labyrinthe[y][x] = ' '
-                y = y - 1
-
+            deplacement(user_input, y - 1, x)
+            labyrinthe[y - 1][x] = 'm'
+            labyrinthe[y][x] = ' '
+            y = y - 1
         elif user_input == 'r':
-            if labyrinthe[y][x + 1] != '#':
-                if labyrinthe[y][x + 1] != " ":
-                    point = point + 1
-                    print(point)
-
-                labyrinthe[y][x + 1] = 'm'
-                labyrinthe[y][x] = ' '
-                x = x + 1
-
-        elif user_input == 'l':
-            if labyrinthe[y][x - 1] != '#':
-                if labyrinthe[y][x - 1] != " ":
-                    point = point + 1
-                    print(point)
-
-                labyrinthe[y][x - 1] = 'm'
-                labyrinthe[y][x] = ' '
-                x = x - 1
+            deplacement(user_input, y, x + 1)
+            labyrinthe[y][x + 1] = 'm'
+            labyrinthe[y][x] = ' '
+            x = x + 1
         elif user_input == 'b':
-            if labyrinthe[y + 1][x] != '#':
-                if labyrinthe[y + 1][x] != " ":
-                    point = point + 1
-                    print(point)
+            deplacement(user_input, y + 1, x)
+            labyrinthe[y + 1][x] = 'm'
+            labyrinthe[y][x] = ' '
+            y = y + 1
+        elif user_input == 'l':
+            deplacement(user_input, y, x - 1)
+            labyrinthe[y][x - 1] = 'm'
+            labyrinthe[y][x] = ' '
+            x = x - 1
 
-                labyrinthe[y + 1][x] = 'm'
-                labyrinthe[y][x] = ' '
-                y = y + 1
+
+
+
 
 
 main()
