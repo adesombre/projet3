@@ -5,7 +5,7 @@ import random
 
 # programme principal
 
-
+# creating a maze from a txt file
 def load_labyrinthe():
     lab = []
     m_position_x = 0
@@ -22,12 +22,12 @@ def load_labyrinthe():
             lab.append(lab_line)
     return lab, m_position_y, m_position_x
 
-
+# display of a maze on the screen
 def display_labyrinthe(labyrinthe):
     for line in labyrinthe:
         print("".join(line))
 
-
+# creation of objects to capture
 def objet(labyrinthe):
     object = ["a", "b", "c"]
     for o in object:
@@ -38,7 +38,7 @@ def objet(labyrinthe):
             yo = random.randint(0, 14)
         labyrinthe[yo][xo] = o
 
-
+# mac giver character's move
 def check_move(lab, new_y, new_x):
     if 0 <= new_y < len(lab) and 0 <= new_x < len(lab[new_y]) and \
             lab[new_y][new_x] != "#":
@@ -46,7 +46,7 @@ def check_move(lab, new_y, new_x):
     else:
         return False
 
-
+# verification collision wall object character
 def collect_item(y, x, lab, point):
     if lab[y][x] != " ":
         if lab[y][x] == "g":
@@ -56,7 +56,7 @@ def collect_item(y, x, lab, point):
             print(point)
     return point
 
-
+# end of the game
 def end_game(point):
     if point == 3:
         print("vous avez gagnee!!")
