@@ -1,6 +1,22 @@
 # fonction  affichage du labyrhin
 
 import random
+import pygame
+from pygame.locals import *
+
+pygame.init()
+size = (15 * 30, 15 * 30)
+screen = pygame.display.set_mode(size)
+
+w = pygame.image.load('ressource/mur.png')
+m = pygame.image.load('ressource/macGyver.png')
+g = pygame.image.load('ressource/Gardien.png')
+a = pygame.image.load('ressource/aiguille.png')
+aa = pygame.transform.scale(a, (100, 100))
+b = pygame.image.load('ressource/seringue.png')
+bb = pygame.transform.scale(b, (70, 70))
+c = pygame.image.load('ressource/ether.png')
+cc = pygame.transform.scale(c, (70, 70))
 
 
 # programme principal
@@ -22,23 +38,30 @@ def load_labyrinthe():
             lab.append(lab_line)
     return lab, m_position_y, m_position_x
 
+
 # display of a maze on the screen
 def display_labyrinthe(labyrinthe):
-    for line in labyrinthe:
-        print("".join(line))
+    for y, line in enumerate(labyrinthe):
+        for x, case in enumerate(line):
+            if case == "#":
+                screen.blit(w, (x * 30, y * 30))
+                screen.blit(m, (x, y))
+    pygame.display.flip()
+
 
 # creation of objects to capture
 def objet(labyrinthe):
-    object = ["a", "b", "c"]
-    for o in object:
+    objects = ["a", "b", "c"]
+    for o in objects:
         xo = random.randint(0, 14)
         yo = random.randint(0, 14)
         while labyrinthe[yo][xo] != " ":
+
             xo = random.randint(0, 14)
             yo = random.randint(0, 14)
-        labyrinthe[yo][xo] = o
+            labyrinthe[yo][xo] = o
 
-# mac giver character's move
+# mac giver character's move collision wall
 def check_move(lab, new_y, new_x):
     if 0 <= new_y < len(lab) and 0 <= new_x < len(lab[new_y]) and \
             lab[new_y][new_x] != "#":
@@ -46,15 +69,18 @@ def check_move(lab, new_y, new_x):
     else:
         return False
 
-# verification collision wall object character
+
+# verification collision  object character , guardian
 def collect_item(y, x, lab, point):
     if lab[y][x] != " ":
         if lab[y][x] == "g":
+
             end_game(point)
         else:
             point = point + 1
             print(point)
     return point
+
 
 # end of the game
 def end_game(point):
@@ -66,41 +92,40 @@ def end_game(point):
 
 
 def main():
-
     labyrinthe, y, x = load_labyrinthe()
     objet(labyrinthe)
     point = 0
+    display_labyrinthe(labyrinthe)
+
     while True:
-        display_labyrinthe(labyrinthe)
-        user_input = input("appuyer sur un touche!")
-        if user_input == 't':
-            if check_move(labyrinthe, y - 1, x):
-                point = collect_item(y - 1, x, labyrinthe, point)
-                labyrinthe[y - 1][x] = 'm'
-                labyrinthe[y][x] = ' '
-                y = y - 1
-        elif user_input == 'r':
-            if check_move(labyrinthe, y, x + 1):
-                point = collect_item(y, x + 1, labyrinthe, point)
-                labyrinthe[y][x + 1] = 'm'
-                labyrinthe[y][x] = ' '
-                x = x + 1
-        elif user_input == 'b':
-            if check_move(labyrinthe, y + 1, x):
-                point = collect_item(y + 1, x, labyrinthe, point)
-                labyrinthe[y + 1][x] = 'm'
-                labyrinthe[y][x] = ' '
-                y = y + 1
-        elif user_input == 'l':
-            if check_move(labyrinthe, y, x - 1):
-                point = collect_item(y, x - 1, labyrinthe, point)
-                labyrinthe[y][x - 1] = 'm'
-                labyrinthe[y][x] = ' '
-                x = x - 1
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP:
+                    if check_move(labyrinthe, y - 1, x):
+                        point = collect_item(y - 1, x, labyrinthe, point)
+                        labyrinthe[y - 1][x] = 'm'
+                        labyrinthe[y][x] = ' '
+                        y = y - 1
+                elif event.key == pygame.K_RIGHT:
+                    if check_move(labyrinthe, y, x + 1):
+                        point = collect_item(y, x + 1, labyrinthe, point)
+                        labyrinthe[y][x + 1] = 'm'
+                        labyrinthe[y][x] = ' '
+                        x = x + 1
+                elif event.key == pygame.K_DOWN:
+                    if check_move(labyrinthe, y + 1, x):
+                        point = collect_item(y + 1, x, labyrinthe, point)
+                        labyrinthe[y + 1][x] = 'm'
+                        labyrinthe[y][x] = ' '
+                        y = y + 1
+                elif event.key == pygame.K_LEFT:
+                    if check_move(labyrinthe, y, x - 1):
+                        point = collect_item(y, x - 1, labyrinthe, point)
+                        labyrinthe[y][x - 1] = 'm'
+                        labyrinthe[y][x] = ' '
+                        x = x - 1
 
-
-
-
+                display_labyrinthe(labyrinthe)
 
 
 main()
