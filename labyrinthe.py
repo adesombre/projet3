@@ -52,7 +52,7 @@ def display_labyrinthe(labyrinthe):
                 screen.blit(m, (x * 30, y * 30))
             screen.blit(g, (1 * 30, 1 * 30))
     objet(labyrinthe)
-    screen.blit(a, (x, y))
+    screen.blit(b, (x * 30, y * 30))
     pygame.display.flip()
 
 
