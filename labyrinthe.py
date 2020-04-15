@@ -1,22 +1,23 @@
-# fonction  affichage du labyrhin
+
 
 import random
 import pygame
-from pygame.locals import *
 
 pygame.init()
 size = (15 * 30, 15 * 30)
 screen = pygame.display.set_mode(size)
 
-w = pygame.image.load('ressource/mur.png')
-m = pygame.image.load('ressource/macGyver.png')
-g = pygame.image.load('ressource/Gardien.png')
-a = pygame.image.load('ressource/aiguille.png')
-aa = pygame.transform.scale(a, (100, 100))
-b = pygame.image.load('ressource/seringue.png')
-bb = pygame.transform.scale(b, (70, 70))
-c = pygame.image.load('ressource/ether.png')
-cc = pygame.transform.scale(c, (70, 70))
+w = pygame.image.load('ressource/mur.png').convert_alpha()
+f = pygame.image.load('ressource/fond.jpg').convert_alpha()
+m = pygame.image.load('ressource/macGyver.png').convert_alpha()
+m = pygame.transform.scale(m, (30, 30))
+g = pygame.image.load('ressource/Gardien.png').convert_alpha()
+a = pygame.image.load('ressource/aiguille.png').convert_alpha()
+a = pygame.transform.scale(a, (30, 30))
+b = pygame.image.load('ressource/seringue.png').convert_alpha()
+b = pygame.transform.scale(b, (30, 30))
+c = pygame.image.load('ressource/ether.png').convert_alpha()
+c = pygame.transform.scale(c, (30, 30))
 
 
 # programme principal
@@ -45,7 +46,13 @@ def display_labyrinthe(labyrinthe):
         for x, case in enumerate(line):
             if case == "#":
                 screen.blit(w, (x * 30, y * 30))
-                screen.blit(m, (x, y))
+            elif case == " ":
+                screen.blit(f, (x * 30, y * 30))
+            elif case == "m":
+                screen.blit(m, (x * 30, y * 30))
+            screen.blit(g, (1 * 30, 1 * 30))
+    objet(labyrinthe)
+    screen.blit(a, (x, y))
     pygame.display.flip()
 
 
@@ -56,10 +63,11 @@ def objet(labyrinthe):
         xo = random.randint(0, 14)
         yo = random.randint(0, 14)
         while labyrinthe[yo][xo] != " ":
-
             xo = random.randint(0, 14)
             yo = random.randint(0, 14)
-            labyrinthe[yo][xo] = o
+
+        labyrinthe[yo][xo] = o
+
 
 # mac giver character's move collision wall
 def check_move(lab, new_y, new_x):
@@ -74,8 +82,7 @@ def check_move(lab, new_y, new_x):
 def collect_item(y, x, lab, point):
     if lab[y][x] != " ":
         if lab[y][x] == "g":
-
-            end_game(point)
+                end_game(point)
         else:
             point = point + 1
             print(point)
@@ -96,9 +103,10 @@ def main():
     objet(labyrinthe)
     point = 0
     display_labyrinthe(labyrinthe)
-
     while True:
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
                     if check_move(labyrinthe, y - 1, x):

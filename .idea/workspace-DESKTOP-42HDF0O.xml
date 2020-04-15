@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58aea73c-4dd0-499b-b401-ae9fe33a78a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/projet3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gardien.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MacGyver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiguille.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ether.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seringue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structures.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tube_plastique.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alain.py" beforeDir="false" afterPath="$PROJECT_DIR$/alain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu_labyrinthe/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/jeu_labyrinthe/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu_labyrinthe/structures.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labyrinthe.py" beforeDir="false" afterPath="$PROJECT_DIR$/labyrinthe.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\alain\OneDrive\Images\gmf\projet3\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zqre4S7t2Qzt9EINocpfqC12YF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alain\OneDrive\Images\gmf\projet3" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="projet3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="labyrinthe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projet3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/labyrinthe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projet3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jeu_labyrinthe" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jeu_labyrinthe/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projet3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.labyrinthe" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.labyrinthe" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\alain\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58aea73c-4dd0-499b-b401-ae9fe33a78a2" name="Default Changelist" comment="" />
+      <created>1585577557225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585577557225</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="93" key="#Inspections" timestamp="1585583342314">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="93" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1585583342314" />
+    <state x="503" y="73" key="#Unnamed" timestamp="1585584706218">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="503" y="73" key="#Unnamed/0.0.1536.864@0.0.1536.864" timestamp="1585584706218" />
+    <state x="223" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585587625702">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1585587625702" />
+    <state x="638" y="258" key="FileChooserDialogImpl" timestamp="1585585076541">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="638" y="258" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585585076541" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1585589101993">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1364" height="208" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585587751044" />
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1585589101993" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1585589101993">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1364" height="208" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585587751044" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1585589101993" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1585589101993">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1364" height="208" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585587751044" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1585589101993" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1585589101993">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1364" height="208" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585587751044" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585589101993" />
+    <state x="369" y="146" key="SettingsEditor" timestamp="1585669249974">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="369" y="146" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585669249974" />
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1585577584418" />
+    <state x="525" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1585669211606">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="525" y="290" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1585669211606" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585577560758" />
+  </component>
+</project>
