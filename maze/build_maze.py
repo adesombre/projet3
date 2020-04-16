@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+# coding:utf-8
 # creating a maze from a txt file
 def load_labyrinthe():
     lab = []
@@ -14,4 +16,5 @@ def load_labyrinthe():
                     lab_line.append(char)
             lab.append(lab_line)
     return lab, m_position_y, m_position_x
-
+if __name__ == '__main__':
+    main()

@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+# coding:utf-8
 import pygame
 """ list characters and accessory more initialization
 """
@@ -15,3 +17,5 @@ b = pygame.image.load('ressource/seringue.png').convert_alpha()
 b = pygame.transform.scale(b, (30, 30))
 c = pygame.image.load('ressource/ether.png').convert_alpha()
 c = pygame.transform.scale(c, (30, 30))
+if __name__ == "__main__":
+    pass

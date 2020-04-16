@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+# coding:utf-8
 import random
 def objet(labyrinthe):
     objects = ["a", "b", "c"]
@@ -36,3 +38,6 @@ def end_game(point):
     else:
         print("vous avez perdu ...")
     exit()
+
+if __name__ == "__main__":
+    pass
