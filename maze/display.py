@@ -1,20 +1,26 @@
 #! /usr/bin/env python3
 # coding:utf-8
-import accesory_characters
-import moving_objets_and_characters
+
 import pygame
+from maze import accesory_characters
+
+
 def display_labyrinthe(labyrinthe):
+    print(labyrinthe)
     for y, line in enumerate(labyrinthe):
         for x, case in enumerate(line):
             if case == "#":
-                accesory_characters.screen.blit(accesory_characters.w, (x * 30, y * 30))
+                accesory_characters.screen.blit(accesory_characters.wall, (x * 30, y * 30))
             elif case == " ":
-                accesory_characters.screen.blit(accesory_characters.f, (x * 30, y * 30))
+                accesory_characters.screen.blit(accesory_characters.fond, (x * 30, y * 30))
             elif case == "m":
-                accesory_characters.screen.blit(accesory_characters.m, (x * 30, y * 30))
-            accesory_characters.screen.blit(accesory_characters.g, (1 * 30, 1 * 30))
-    moving_objets_and_characters.objet(labyrinthe)
-    accesory_characters.screen.blit(accesory_characters.a, (x, y))
+                accesory_characters.screen.blit(accesory_characters.mc_gyver, (x * 30, y * 30))
+            elif case == "g":
+                accesory_characters.screen.blit(accesory_characters.guardian, (x * 30, y * 30))
+            elif case == "a":
+                accesory_characters.screen.blit(accesory_characters.needle, (x * 30, y * 30))
+            elif case == "b":
+                accesory_characters.screen.blit(accesory_characters.syringe, (x * 30, y * 30))
+            elif case == "c":
+                accesory_characters.screen.blit(accesory_characters.bottle_ether, (x * 30, y * 30))
     pygame.display.flip()
-if __name__ == "__main__":
-    pass
