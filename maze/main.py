@@ -3,14 +3,15 @@
 
 import pygame
 
-from maze import labyrinth, display
+from maze import labyrinth
+from maze.display_accesory import Display
 
 
 def main():
     lab = labyrinth.Labyrinth("../map.txt")
     y, x = lab.find_player()
     point = 0
-    display.display_labyrinthe(lab.lab)
+    Display.display_labyrinthe(lab.lab)
 
     while True:
         for event in pygame.event.get():
@@ -23,7 +24,7 @@ def main():
                         lab.update_character(y - 1, x)
                         y = y - 1
                 elif event.key == pygame.K_RIGHT:
-                    if lab.check_move( y, x + 1):
+                    if lab.check_move(y, x + 1):
                         point = lab.collect_item(y, x + 1, point)
                         lab.update_character(y, x + 1)
                         x = x + 1
@@ -40,5 +41,5 @@ def main():
 
                 display.display_labyrinthe(lab.lab)
 
-if __name__ == "__main__":
-    main()
+
+main()

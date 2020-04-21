@@ -13,12 +13,11 @@ m = pygame.image.load('ressource/macGyver.png').convert_alpha()
 m = pygame.transform.scale(m, (30, 30))
 g = pygame.image.load('ressource/Gardien.png').convert_alpha()
 a = pygame.image.load('ressource/aiguille.png').convert_alpha()
-a = pygame.transform.scale(a, (30, 30))
+a = pygame.transform.scale(a, (30, 30)).convert_alpha()
 b = pygame.image.load('ressource/seringue.png').convert_alpha()
 b = pygame.transform.scale(b, (30, 30))
 c = pygame.image.load('ressource/ether.png').convert_alpha()
-c = pygame.transform.scale(c, (30, 30))
-
+c = pygame.transform.scale(c, (30, 30)).convert_alpha()
 
 # programme principal
 
@@ -50,9 +49,16 @@ def display_labyrinthe(labyrinthe):
                 screen.blit(f, (x * 30, y * 30))
             elif case == "m":
                 screen.blit(m, (x * 30, y * 30))
-            screen.blit(g, (1 * 30, 1 * 30))
-    objet(labyrinthe)
-    screen.blit(b, (x * 30, y * 30))
+            elif case == "g":
+                screen.blit(g, (x * 30, y * 30))
+            elif case == "a":
+                screen.blit(a, (x * 30, y * 30))
+            elif case == "b":
+                screen.blit(b, (x * 30, y * 30))
+            elif case == "c":
+                screen.blit(c, (x * 30, y * 30))
+
+
     pygame.display.flip()
 
 
