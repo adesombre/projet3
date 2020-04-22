@@ -20,6 +20,10 @@ class Labyrinth:
         self.lab = lab
 
     def find_player(self):
+        """
+        Find player position in labyrinth.
+        :return: y, x position
+        """
         for y, line in enumerate(self.lab):
             for x, char in enumerate(line):
                 if char == "m":

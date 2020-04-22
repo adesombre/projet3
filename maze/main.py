@@ -3,15 +3,16 @@
 
 import pygame
 
-from maze import labyrinth
-from maze.display_accesory import Display
+from maze.labyrinth import Labyrinth
+from maze.display import Display
 
 
 def main():
-    lab = labyrinth.Labyrinth("../map.txt")
+    lab = Labyrinth("../map.txt")
     y, x = lab.find_player()
     point = 0
-    Display.display_labyrinthe(lab.lab)
+    display = Display()
+    display.display_labyrinthe(lab.lab)
 
     while True:
         for event in pygame.event.get():

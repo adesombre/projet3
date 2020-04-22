@@ -39,7 +39,7 @@ def load_labyrinthe():
     return lab, m_position_y, m_position_x
 
 
-# display of a maze on the screen
+# display.py of a maze on the screen
 def display_labyrinthe(labyrinthe):
     for y, line in enumerate(labyrinthe):
         for x, case in enumerate(line):
