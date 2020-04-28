@@ -4,7 +4,6 @@ import random
 class Labyrinth:
     def __init__(self, map_path):
         self.lab = []
-
         self.load_labyrinth(map_path)
         self.randomize_objects()
 
