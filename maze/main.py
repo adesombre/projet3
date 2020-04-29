@@ -42,5 +42,5 @@ def main():
 
                 display.display_labyrinthe(lab.lab)
 
-
-main()
+if __name__ == '__main__':
+    main()

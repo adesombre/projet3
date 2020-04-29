@@ -33,22 +33,21 @@ class Display:
         """
         Transform assets that are not at the right size.
         """
-        self.assets["mc_gyver"] = pygame.transform.scale(self.assets\
-                                                         ["mc_gyver"], (30, 30))
-        self.assets["guardian"] = pygame.transform.scale(self.assets\
-                                                         ["guardian"], (30, 30))
-        self.assets["needle"] = pygame.transform.scale(self.assets\
-                                                       ["needle"], (30, 30))
-        self.assets["syringe"] = pygame.transform.scale(self.assets\
-                                                        ["syringe"], (30, 30))
-        self.assets["bottle_ether"] = pygame.transform.scale(self.assets\
-                                                    ["bottle_ether"], (30, 30))
-
-        """ 
-            display of the labyrinth and character and object
-        """
+        self.assets["mc_gyver"] = pygame.transform\
+            .scale(self.assets["mc_gyver"], (30, 30))
+        self.assets["guardian"] = pygame.transform\
+            .scale(self.assets["guardian"], (30, 30))
+        self.assets["needle"] = pygame.transform\
+            .scale(self.assets["needle"], (30, 30))
+        self.assets["syringe"] = pygame.transform\
+            .scale(self.assets["syringe"], (30, 30))
+        self.assets["bottle_ether"] = pygame.transform\
+            .scale(self.assets["bottle_ether"], (30, 30))
 
     def display_labyrinthe(self, labyrinth):
+        """
+        display of the labyrinth and character and object
+        """
         for y, line in enumerate(labyrinth):
             for x, case in enumerate(line):
                 if case == "#":
