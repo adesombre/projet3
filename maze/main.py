@@ -3,8 +3,8 @@
 
 import pygame
 
-from maze.labyrinth import Labyrinth
-from maze.display import Display
+from labyrinth import Labyrinth
+from display import Display
 
 
 def main():
