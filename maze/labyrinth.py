@@ -37,7 +37,6 @@ class Labyrinth:
             while self.lab[yo][xo] != " ":
                 xo = random.randint(0, 14)
                 yo = random.randint(0, 14)
-
             self.lab[yo][xo] = o
 
     # mac giver character's move collision wall
